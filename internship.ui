@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>internshipClass</class>
+ <widget class="QMainWindow" name="internshipClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>921</width>
+    <height>621</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>internship</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="1">
+     <widget class="QWidget" name="widget" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>3</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(40, 40, 40);</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <widget class="QVTKOpenGLNativeWidget" name="openGLWidget"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QWidget" name="widget_2" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>1</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QGroupBox" name="groupBox">
+         <property name="title">
+          <string>Filter</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QComboBox" name="combo_filter">
+            <item>
+             <property name="text">
+              <string>VoxelGrid</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>passthrough</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>radius_outlier_removal</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>conditional_removal</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>statistical_outlier_removal</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QStackedWidget" name="stackedWidget_filter">
+            <property name="currentIndex">
+             <number>0</number>
+            </property>
+            <widget class="QWidget" name="page">
+             <layout class="QGridLayout" name="gridLayout_3">
+              <item row="0" column="0">
+               <widget class="QLabel" name="label">
+                <property name="text">
+                 <string>Leaf size:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QDoubleSpinBox" name="doubleSpinBox">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                  <horstretch>1</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="page_2">
+             <widget class="QDoubleSpinBox" name="doubleSpinBox_13">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>71</width>
+                <height>22</height>
+               </rect>
+              </property>
+              <property name="minimum">
+               <double>-9999.000000000000000</double>
+              </property>
+              <property name="maximum">
+               <double>9900.989999999999782</double>
+              </property>
+              <property name="value">
+               <double>0.000000000000000</double>
+              </property>
+             </widget>
+             <widget class="QDoubleSpinBox" name="doubleSpinBox_11">
+              <property name="geometry">
+               <rect>
+                <x>40</x>
+                <y>20</y>
+                <width>91</width>
+                <height>22</height>
+               </rect>
+              </property>
+              <property name="minimum">
+               <double>-10000.000000000000000</double>
+              </property>
+              <property name="maximum">
+               <double>10000.000000000000000</double>
+              </property>
+             </widget>
+             <widget class="QDoubleSpinBox" name="doubleSpinBox_12">
+              <property name="geometry">
+               <rect>
+                <x>80</x>
+                <y>0</y>
+                <width>71</width>
+                <height>22</height>
+               </rect>
+              </property>
+              <property name="minimum">
+               <double>-9999.000000000000000</double>
+              </property>
+              <property name="maximum">
+               <double>10000.000000000000000</double>
+              </property>
+             </widget>
+            </widget>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btn_run_filter">
+            <property name="text">
+             <string>Run Filter</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_2">
+         <property name="title">
+          <string>Segment</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QComboBox" name="combo_segment">
+            <property name="currentIndex">
+             <number>0</number>
+            </property>
+            <item>
+             <property name="text">
+              <string>sac_segmentation</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>extract_clusters</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>region_growing</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>condition_extract_clusters</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QStackedWidget" name="stackedWidget_segment">
+            <property name="currentIndex">
+             <number>1</number>
+            </property>
+            <widget class="QWidget" name="page_3">
+             <layout class="QVBoxLayout" name="verticalLayout_4">
+              <item>
+               <widget class="QLabel" name="label_3">
+                <property name="text">
+                 <string>MType：</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="comboBox_2">
+                <item>
+                 <property name="text">
+                  <string>Plane</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Line</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Cylinder</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_4">
+                <property name="text">
+                 <string>Method：</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="comboBox_3">
+                <item>
+                 <property name="text">
+                  <string>RANSAC</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>No</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_5">
+                <property name="text">
+                 <string>setDistance：</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QDoubleSpinBox" name="doubleSpinBox_2"/>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="page_5">
+             <widget class="QLabel" name="label_11">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>10</y>
+                <width>61</width>
+                <height>16</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>Min_Size:</string>
+              </property>
+             </widget>
+             <widget class="QDoubleSpinBox" name="doubleSpinBox_8">
+              <property name="geometry">
+               <rect>
+                <x>70</x>
+                <y>10</y>
+                <width>87</width>
+                <height>22</height>
+               </rect>
+              </property>
+              <property name="maximum">
+               <double>999999999.990000009536743</double>
+              </property>
+             </widget>
+             <widget class="QLabel" name="label_12">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>50</y>
+                <width>61</width>
+                <height>16</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>Max_Size:</string>
+              </property>
+             </widget>
+             <widget class="QDoubleSpinBox" name="doubleSpinBox_9">
+              <property name="geometry">
+               <rect>
+                <x>70</x>
+                <y>50</y>
+                <width>87</width>
+                <height>22</height>
+               </rect>
+              </property>
+              <property name="maximum">
+               <double>999999999.990000009536743</double>
+              </property>
+             </widget>
+             <widget class="QLabel" name="label_13">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>90</y>
+                <width>71</width>
+                <height>16</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>Tolerance:</string>
+              </property>
+             </widget>
+             <widget class="QDoubleSpinBox" name="doubleSpinBox_10">
+              <property name="geometry">
+               <rect>
+                <x>70</x>
+                <y>90</y>
+                <width>87</width>
+                <height>22</height>
+               </rect>
+              </property>
+              <property name="decimals">
+               <number>7</number>
+              </property>
+              <property name="minimum">
+               <double>0.000000000000000</double>
+              </property>
+              <property name="maximum">
+               <double>99999999.989999994635582</double>
+              </property>
+              <property name="singleStep">
+               <double>0.000000000000000</double>
+              </property>
+              <property name="value">
+               <double>0.000000000000000</double>
+              </property>
+             </widget>
+            </widget>
+            <widget class="QWidget" name="page_4">
+             <widget class="QDoubleSpinBox" name="doubleSpinBox_3">
+              <property name="geometry">
+               <rect>
+                <x>70</x>
+                <y>0</y>
+                <width>87</width>
+                <height>22</height>
+               </rect>
+              </property>
+              <property name="maximum">
+               <double>1000000.000000000000000</double>
+              </property>
+             </widget>
+             <widget class="QDoubleSpinBox" name="doubleSpinBox_4">
+              <property name="geometry">
+               <rect>
+                <x>70</x>
+                <y>20</y>
+                <width>87</width>
+                <height>22</height>
+               </rect>
+              </property>
+              <property name="maximum">
+               <double>9000000.000000000000000</double>
+              </property>
+             </widget>
+             <widget class="QDoubleSpinBox" name="doubleSpinBox_5">
+              <property name="geometry">
+               <rect>
+                <x>70</x>
+                <y>40</y>
+                <width>87</width>
+                <height>22</height>
+               </rect>
+              </property>
+              <property name="maximum">
+               <double>1000.000000000000000</double>
+              </property>
+             </widget>
+             <widget class="QDoubleSpinBox" name="doubleSpinBox_6">
+              <property name="geometry">
+               <rect>
+                <x>70</x>
+                <y>60</y>
+                <width>87</width>
+                <height>22</height>
+               </rect>
+              </property>
+             </widget>
+             <widget class="QDoubleSpinBox" name="doubleSpinBox_7">
+              <property name="geometry">
+               <rect>
+                <x>70</x>
+                <y>80</y>
+                <width>87</width>
+                <height>22</height>
+               </rect>
+              </property>
+             </widget>
+             <widget class="QLabel" name="label_6">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>0</y>
+                <width>54</width>
+                <height>16</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>Misize:</string>
+              </property>
+             </widget>
+             <widget class="QLabel" name="label_7">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>20</y>
+                <width>54</width>
+                <height>16</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>Masize:</string>
+              </property>
+             </widget>
+             <widget class="QLabel" name="label_8">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>40</y>
+                <width>54</width>
+                <height>16</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>NONei:</string>
+              </property>
+             </widget>
+             <widget class="QLabel" name="label_9">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>60</y>
+                <width>81</width>
+                <height>20</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>SThreshold:</string>
+              </property>
+             </widget>
+             <widget class="QLabel" name="label_10">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>80</y>
+                <width>81</width>
+                <height>20</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>CThreshold:</string>
+              </property>
+             </widget>
+            </widget>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btn_run_segment">
+            <property name="text">
+             <string>Run Segment</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QListWidget" name="listWidget_clouds"/>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btn_openFile">
+         <property name="text">
+          <string>btn_openFile</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>921</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>选择模型</string>
+    </property>
+    <widget class="QMenu" name="menuPointNeXt_CNM">
+     <property name="title">
+      <string>PointNeXt-CNM</string>
+     </property>
+     <addaction name="actionRun"/>
+    </widget>
+    <addaction name="menuPointNeXt_CNM"/>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionRun">
+   <property name="text">
+    <string>Run</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QVTKOpenGLNativeWidget</class>
+   <extends>QOpenGLWidget</extends>
+   <header location="global">QVTKOpenGLNativeWidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="internship.qrc"/>
+ </resources>
+ <connections/>
+</ui>
