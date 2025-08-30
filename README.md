@@ -1,8 +1,8 @@
-点云处理工具 (Point Cloud Processing Tool)
+开源点云处理工具 (Point Cloud Processing Tool)
 <img width="1920" height="1032" alt="image" src="https://github.com/user-attachments/assets/bf9c56f0-4d30-46c7-ab6a-d34047a5109b" />
 
 简介
-本项目是一个基于 PCL (Point Cloud Library)、Qt6 和 C++ 开发的简单点云处理工业软件。它旨在为点云数据提供直观的可视化、基础的滤波操作以及初步的分割功能，以满足常见的工业应用需求。本软件致力于提供一个用户友好的界面，方便工程师和研究人员进行点云数据的预处理和分析。
+本项目是一个开源基于 PCL (Point Cloud Library)、Qt6 和 C++ 开发的简单点云处理工业软件。它旨在为点云数据提供直观的可视化、基础的滤波操作以及初步的分割功能，以满足常见的工业应用需求。本软件致力于提供一个用户友好的界面，方便工程师和研究人员进行点云数据的预处理和分析。
 主要功能
 点云可视化：
 支持加载多种格式的点云文件 (例如 .pcd, .ply)。
