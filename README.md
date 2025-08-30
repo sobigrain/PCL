@@ -48,9 +48,6 @@ cd build
 code
 Bash
 cmake .. -DCMAKE_PREFIX_PATH="<你的Qt安装路径>/<版本号>/msvc2019_64/lib/cmake"
-# 例如: cmake .. -DCMAKE_PREFIX_PATH="C:/Qt/6.5.2/msvc2019_64/lib/cmake"
-# 如果PCL未添加到系统路径，你可能还需要手动指定PCLConfig.cmake的路径
-# 例如: -DPCL_DIR="<你的PCL安装路径>/lib/cmake/PCL-1.12"
 请根据你的实际 Qt 和 PCL 安装路径修改 CMAKE_PREFIX_PATH 和 PCL_DIR。
 生成解决方案：CMake 将生成一个 Visual Studio 解决方案文件 (.sln)。
 在 Visual Studio 中打开：用 Visual Studio 2022 打开生成的 .sln 文件。
